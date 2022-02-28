@@ -21,6 +21,13 @@ export default function Review() {
   const [isDownload, setIsDownload] = useRecoilState(downloadStatus);
 
   const handlePdfDownload = () => {
+    
+      var updatedForm = {step: 7}
+      setForm(form => ({
+          ...form,
+          ...updatedForm
+      }))
+  
     setIsDownload("true");
   };
 
